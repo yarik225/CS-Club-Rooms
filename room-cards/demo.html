@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHS CS Club Room Cards Demo</title>
+
+    <!-- Link to Open Sans webfont (used on stevenson.space) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <!-- Link to Fira Code webfont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Link to stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- JavaScript -->
+    <script defer src="room-cards.js"></script>
+</head>
+<body>
+    <!-- SHS Computer Science Club heading -->
+<div id="heroSection">
+    <div>
+        <h1 class="codeFont typewriter">SHS Computer Science Club</h1>
+    </div>
+    
+    <h2>Room cards demo</h2>
+</div>
+
+<!-- Grids of club cards -->
+<div id="clubCardsGrid">
+    <!-- One for each club in CS club -->
+    <div class="clubCard">
+        <!-- Name of the club -->
+        <div class="clubHeading">
+            Advanced Web Development
+        </div>
+        
+        <!-- Stuff about the club -->
+        <div class="clubContent">
+            <!-- Photo and description -->
+            <div class="clubDescriptionArea">
+                <div id="template-club-image-remove-in-production" class="clubImage"></div>
+                <div class="clubDescriptionText">
+                    Advanced Web Development club is where you develop advanced webs. It requires an understanding of JavaScript, CSS, and HTML. It is recommended that students have at least 6-7 completed web development projects before joining.
+                </div>
+            </div>
+            
+            <!-- Seperate the club content from description area to E-Board -->
+            <div class="clubContentSeperator"></div>
+            
+            <!-- The E-Board for the club -->
+            <div class="clubEBoard">
+                <!-- Each is per person on the E-Board -->
+                <div class="clubEBItem">
+                    <div class="eboard-template-image-remove-in-production-01 clubEBImage"></div>
+                    <div class="clubEBDescription">
+                        <span class="clubEBName">Melinda Sordino</span>
+                        <span>Leader</span>
+                        <a class="clubEBEmail" href="mailto:msordino03@merryweatherhs.org">msordino03@merryweatherhs.org</a>
+                    </div>
+                </div>
+                <div class="clubEBItem">
+                    <div class="eboard-template-image-remove-in-production-02 clubEBImage"></div>
+                    <div class="clubEBDescription">
+                        <span class="clubEBName">Arnold Spirit Jr.</span>
+                        <span>Director of Diversity and Inclusion</span>
+                        <a class="clubEBEmail" href="mailto:aspirit10@reardan.edu">aspirit10@reardan.edu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="clubCard">
+        <!-- Name of the club -->
+        <div class="clubHeading">
+            Simple Web Development
+        </div>
+        
+        <!-- Stuff about the club -->
+        <div class="clubContent">
+            <!-- Photo and description -->
+            <div class="clubDescriptionArea">
+                <div id="template-club-image-remove-in-production-02" class="clubImage"></div>
+                <div class="clubDescriptionText">
+                    Simple Web Development club is where you develop simple webs. It does not require any experience. It is recommended that students have about 0.6-0.7 completed web development projects before joining.
+                </div>
+            </div>
+            
+            <!-- Seperate the club content from description area to E-Board -->
+            <div class="clubContentSeperator"></div>
+            
+            <!-- The E-Board for the club -->
+            <div class="clubEBoard">
+                <!-- Each is per person on the E-Board -->
+                <div class="clubEBItem">
+                    <div class="eboard-template-image-remove-in-production-03 clubEBImage"></div>
+                    <div class="clubEBDescription">
+                        <span class="clubEBName">Maverick Trevellian</span>
+                        <span>Director of Culture</span>
+                        <a class="clubEBEmail" href="mailto:mtrevillian29@students.sixseven.edu">mtrevillian29@students.sixseven.edu</a>
+                    </div>
+                </div>
+                <div class="clubEBItem">
+                    <div class="eboard-template-image-remove-in-production-04 clubEBImage"></div>
+                    <div class="clubEBDescription">
+                        <span class="clubEBName">Abraham Lincoln</span>
+                        <span>Director of Governance</span>
+                        <a class="clubEBEmail" href="mailto:alincoln23@students.nonsuchms.edu">alincoln23@students.nonsuchms.edu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+Demo created by Tyler Yeh, November 2025, SHS Computer Science Club
+<p class="copyleftNotice">
+    Room Cards JavaScript Utilities is Free Software and is © 2025 Tyler Yeh, licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank">AGPLv3</a>.
+    <br>
+    This means that anyone can reuse, modify, and redistribute it as long as they give attribution and follow the terms of the license.
+</p>
+</body>
+</html>

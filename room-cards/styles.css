@@ -1,0 +1,215 @@
+/* Import other stylesheets */
+@import url("typewriter-effect.css");
+
+:root {
+    /* Stevenson colors: Green and Gold */
+    /* Theme colors inspired by stevenson.space */
+    --theme-color: #1b5e20;
+    --theme-text-color: #ffffff;
+    --email-link-color: #888888;
+    
+    /* Club cards */
+    --club-card-width: 475px;
+}
+
+/* Website theme */
+html {
+    width: 100%;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    width: 100%;
+    padding-bottom: 50px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.codeFont {
+    font-family: "Fira Code", monospace;
+}
+
+/* Hero Section */
+#heroSection {
+    width: 100%;
+    height: 250px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+    background-color: var(--theme-color);
+    color: #fff;
+}
+
+#heroSection h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+#heroSection h2 {
+    margin-top: 10px;
+}
+
+/* Styling for cards */
+#clubCardsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding: 15px;
+}
+
+.clubCard {
+    display: flex;
+    flex-direction: column;
+    
+    box-shadow: 0 0 20px #00000033;
+    border-radius: 15px;
+    min-width: var(--club-card-width);
+    
+    font-size: 15px;
+}
+
+.clubHeading {
+    background-color: var(--theme-color);
+    color: var(--theme-text-color);
+    padding: 10px 25px;
+    border-radius: 15px 15px 0px 0px;
+    
+    box-sizing: border-box;
+    width: 100%;
+    
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.clubContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+    padding: 20px 25px;
+}
+
+/* Template club image -- Don't include this ID or styles for this ID in the final production version. */
+#template-club-image-remove-in-production {
+    background-image: url("https://images.pexels.com/photos/8199557/pexels-photo-8199557.jpeg?cs=srgb&dl=pexels-yankrukov-8199557.jpg&fm=jpg&w=640&h=427");
+}
+
+#template-club-image-remove-in-production-02 {
+    background-image: url("https://project-static-assets.s3.amazonaws.com/APISpreadsheets/ProgrammingMemes/FinishingCode.jpg");
+}
+
+.clubDescriptionArea {
+    display: flex;
+    flex-direction: row;
+    
+    gap: 25px;
+}
+
+.clubImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 6.7px;
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    flex-shrink: 0;
+}
+
+.clubContentSeperator {
+    width: 100%;
+    height: 1px;
+    border-radius: 1px;
+    background-color: #00000022;
+}
+
+.clubEBoard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 100%;
+    
+    font-size: 14px;
+}
+
+.clubEBoard.singleEBmember {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Temporary placeholder image for club E-Board members */
+
+.eboard-template-image-remove-in-production-01 {
+    background-image: url("https://i.pinimg.com/originals/8d/fc/25/8dfc25c9a8dbf1d9519d8a8c0d5bdec6.jpg");
+}
+
+.eboard-template-image-remove-in-production-02 {
+    background-image: url("https://img.freepik.com/premium-photo/ai-generated-portrait-man-wearing-suit-with-tie_665346-39573.jpg?w=2000");
+}
+
+.eboard-template-image-remove-in-production-03 {
+    background-image: url("https://i.kym-cdn.com/editorials/icons/original/000/014/007/67-kid.jpg");
+}
+
+.eboard-template-image-remove-in-production-04 {
+    background-image: url("https://img1.etsystatic.com/106/1/7624093/il_570xN.929687851_svp6.jpg");
+}
+
+.clubEBImage {
+    width: 66px;
+    height: 66px;
+    border-radius: 100%;
+    
+    margin-top: 5px;
+    
+    flex-shrink: 0;
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.clubEBItem {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    
+    gap: 15px;
+}
+
+.clubEBDescription {
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: anywhere;
+}
+
+.clubEBName {
+    font-size: 16px;
+}
+
+.clubEBEmail {
+    font-size: 12px;
+    text-decoration: underline;
+    color: var(--email-link-color);
+}
+
+/* Copyleft notice */
+.copyleftNotice {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    color: #888888;
+    
+    text-align: center;
+    max-width: 50%;
+}
