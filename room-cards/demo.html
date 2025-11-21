@@ -1,129 +1,244 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHS CS Club Room Cards Demo</title>
+/* Import other stylesheets */
+@import url("typewriter-effect.css");
 
-    <!-- Link to Open Sans webfont (used on stevenson.space) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-
-    <!-- Link to Fira Code webfont -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
-
-    <!-- Link to stylesheet -->
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- JavaScript -->
-    <script defer src="room-cards.js"></script>
-</head>
-<body>
-    <!-- SHS Computer Science Club heading -->
-<div id="heroSection">
-    <div>
-        <h1 class="codeFont typewriter">SHS Computer Science Club</h1>
-    </div>
+:root {
+    /* Stevenson colors: Green and Gold */
+    /* Theme colors inspired by stevenson.space */
+    --theme-color: #1b5e20;
+    --theme-text-color: #ffffff;
+    --email-link-color: #888888;
     
-    <h2>Room cards demo</h2>
-</div>
+    /* Club cards */
+    --club-card-width: 475px;
+}
 
-<!-- Grids of club cards -->
-<div id="clubCardsGrid">
-    <!-- One for each club in CS club -->
-    <div class="clubCard">
-        <!-- Name of the club -->
-        <div class="clubHeading">
-            Advanced Web Development
-        </div>
-        
-        <!-- Stuff about the club -->
-        <div class="clubContent">
-            <!-- Photo and description -->
-            <div class="clubDescriptionArea">
-                <div id="template-club-image-remove-in-production" class="clubImage"></div>
-                <div class="clubDescriptionText">
-                    Advanced Web Development club is where you develop advanced webs. It requires an understanding of JavaScript, CSS, and HTML. It is recommended that students have at least 6-7 completed web development projects before joining.
-                </div>
-            </div>
-            
-            <!-- Seperate the club content from description area to E-Board -->
-            <div class="clubContentSeperator"></div>
-            
-            <!-- The E-Board for the club -->
-            <div class="clubEBoard">
-                <!-- Each is per person on the E-Board -->
-                <div class="clubEBItem">
-                    <div class="eboard-template-image-remove-in-production-01 clubEBImage"></div>
-                    <div class="clubEBDescription">
-                        <span class="clubEBName">Melinda Sordino</span>
-                        <span>Leader</span>
-                        <a class="clubEBEmail" href="mailto:msordino03@merryweatherhs.org">msordino03@merryweatherhs.org</a>
-                    </div>
-                </div>
-                <div class="clubEBItem">
-                    <div class="eboard-template-image-remove-in-production-02 clubEBImage"></div>
-                    <div class="clubEBDescription">
-                        <span class="clubEBName">Arnold Spirit Jr.</span>
-                        <span>Director of Diversity and Inclusion</span>
-                        <a class="clubEBEmail" href="mailto:aspirit10@reardan.edu">aspirit10@reardan.edu</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+/* Website theme */
+html {
+    width: 100%;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    width: 100%;
+    padding-bottom: 50px;
     
-    <div class="clubCard">
-        <!-- Name of the club -->
-        <div class="clubHeading">
-            Simple Web Development
-        </div>
-        
-        <!-- Stuff about the club -->
-        <div class="clubContent">
-            <!-- Photo and description -->
-            <div class="clubDescriptionArea">
-                <div id="template-club-image-remove-in-production-02" class="clubImage"></div>
-                <div class="clubDescriptionText">
-                    Simple Web Development club is where you develop simple webs. It does not require any experience. It is recommended that students have about 0.6-0.7 completed web development projects before joining.
-                </div>
-            </div>
-            
-            <!-- Seperate the club content from description area to E-Board -->
-            <div class="clubContentSeperator"></div>
-            
-            <!-- The E-Board for the club -->
-            <div class="clubEBoard">
-                <!-- Each is per person on the E-Board -->
-                <div class="clubEBItem">
-                    <div class="eboard-template-image-remove-in-production-03 clubEBImage"></div>
-                    <div class="clubEBDescription">
-                        <span class="clubEBName">Maverick Trevellian</span>
-                        <span>Director of Culture</span>
-                        <a class="clubEBEmail" href="mailto:mtrevillian29@students.sixseven.edu">mtrevillian29@students.sixseven.edu</a>
-                    </div>
-                </div>
-                <div class="clubEBItem">
-                    <div class="eboard-template-image-remove-in-production-04 clubEBImage"></div>
-                    <div class="clubEBDescription">
-                        <span class="clubEBName">Abraham Lincoln</span>
-                        <span>Director of Governance</span>
-                        <a class="clubEBEmail" href="mailto:alincoln23@students.nonsuchms.edu">alincoln23@students.nonsuchms.edu</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
 
-Demo created by Tyler Yeh, November 2025, SHS Computer Science Club
-<p class="copyleftNotice">
-    Room Cards JavaScript Utilities is Free Software and is © 2025 Tyler Yeh, licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank">AGPLv3</a>.
-    <br>
-    This means that anyone can reuse, modify, and redistribute it as long as they give attribution and follow the terms of the license.
-</p>
-</body>
-</html>
+.codeFont {
+    font-family: "Fira Code", monospace;
+}
+
+/* Hero Section */
+#heroSection {
+    width: 100%;
+    height: 250px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+    background-color: var(--theme-color);
+    color: #fff;
+}
+
+#heroSection h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+#heroSection h2 {
+    margin-top: 10px;
+}
+
+/* Styling for cards */
+#clubCardsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding: 15px;
+}
+
+/* Accessible for different screen sizes */
+@media (min-width: 1200px) {
+    #clubCardsGrid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 1500px) {
+    #clubCardsGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    #clubCardsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1100px) {
+    .clubEBoard {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .clubCard {
+        min-width: unset !important;
+    }
+}
+
+.clubCard {
+    display: flex;
+    flex-direction: column;
+    
+    box-shadow: 0 0 20px #00000033;
+    border-radius: 15px;
+    min-width: var(--club-card-width);
+    
+    font-size: 15px;
+}
+
+.clubHeading {
+    background-color: var(--theme-color);
+    color: var(--theme-text-color);
+    padding: 10px 25px;
+    border-radius: 15px 15px 0px 0px;
+    
+    box-sizing: border-box;
+    width: 100%;
+    
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.clubContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+    padding: 20px 25px;
+}
+
+/* Template club image -- Don't include this ID or styles for this ID in the final production version. */
+#template-club-image-remove-in-production {
+    background-image: url("https://images.pexels.com/photos/8199557/pexels-photo-8199557.jpeg?cs=srgb&dl=pexels-yankrukov-8199557.jpg&fm=jpg&w=640&h=427");
+}
+
+#template-club-image-remove-in-production-02 {
+    background-image: url("https://project-static-assets.s3.amazonaws.com/APISpreadsheets/ProgrammingMemes/FinishingCode.jpg");
+}
+
+.clubDescriptionArea {
+    display: flex;
+    flex-direction: row;
+    
+    gap: 25px;
+}
+
+.clubImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 6.7px;
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    flex-shrink: 0;
+}
+
+.clubContentSeperator {
+    width: 100%;
+    height: 1px;
+    border-radius: 1px;
+    background-color: #00000022;
+}
+
+.clubEBoard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 100%;
+    
+    font-size: 14px;
+}
+
+.clubEBoard.singleEBmember {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Temporary placeholder image for club E-Board members */
+
+.eboard-template-image-remove-in-production-01 {
+    background-image: url("https://i.pinimg.com/originals/8d/fc/25/8dfc25c9a8dbf1d9519d8a8c0d5bdec6.jpg");
+}
+
+.eboard-template-image-remove-in-production-02 {
+    background-image: url("https://img.freepik.com/premium-photo/ai-generated-portrait-man-wearing-suit-with-tie_665346-39573.jpg?w=2000");
+}
+
+.eboard-template-image-remove-in-production-03 {
+    background-image: url("https://i.kym-cdn.com/editorials/icons/original/000/014/007/67-kid.jpg");
+}
+
+.eboard-template-image-remove-in-production-04 {
+    background-image: url("https://img1.etsystatic.com/106/1/7624093/il_570xN.929687851_svp6.jpg");
+}
+
+.clubEBImage {
+    width: 66px;
+    height: 66px;
+    border-radius: 100%;
+    
+    margin-top: 5px;
+    
+    flex-shrink: 0;
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.clubEBItem {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    
+    gap: 15px;
+}
+
+.clubEBDescription {
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: anywhere;
+}
+
+.clubEBName {
+    font-size: 16px;
+}
+
+.clubEBEmail {
+    font-size: 12px;
+    text-decoration: underline;
+    color: var(--email-link-color);
+}
+
+/* Copyleft notice */
+.copyleftNotice {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    color: #888888;
+    
+    text-align: center;
+    max-width: 50%;
+}
