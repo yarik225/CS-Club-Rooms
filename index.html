@@ -3,53 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stevenson Computer Science Club</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="header">
-        <h1>Stevenson Computer Science Club</h1>
-        <button id="button">Home</button>
-        <button id="button">Credits</button>
-        <h2>Next Meeting: </h2>
-        <h2>11/10/25</h2>
-    </header>
-    <div id="wrap">
-        <div id="box1">
-            <h2>Advanced Web Development</h2>
-            <h2>Level: Intermediate</h2>
-            <h2>Room:</h2>
-            <h1>3006</h1>
-            <a href="">Learn More</a>
+    <div class="container"> 
+        <header id="header">
+            <div class="header-content">
+                <h1>Stevenson Computer Science Club</h1>
+                <div class="meeting-info">
+                    <span>Next Meeting:</span>
+                    <span>11/10/25 @ link</span>
+                </div>
+            </div>
+
+            <nav class="nav-buttons">
+                <button class="nav-button">Home</button>
+                <button class="nav-button">Credits</button>
+                <button class="nav-button">Details</button>
+            </nav>
+        </header>
+
+        <div id="announcements">
+            <h2>Announcements:</h2>
+            <p>[insert announcements here]</p>
         </div>
-        <div id="box2">
-            <h2>Algorithms</h2>
-            <h2>Level: Intermediate</h2>
-            <h2>Room:</h2>
-            <h1>3024</h1>
-            <a href="">Learn More</a>
+
+        <div id="wrap">
+            
+            <div class="box style-A">
+                <h2>Advanced Web Development</h2>
+                <div class="level-info">Level: Intermediate</div>
+                <div class="room-details">
+                    <span class="room-label small-heading">Room:</span>
+                    <span class="room-number">3006</span>
+                    <a href="">Learn more</a> 
+                </div>
+            </div>
+
+            <div class="box style-B">
+                <h2>Algorithms</h2>
+                <div class="level-info">Level: Intermediate</div>
+                <div class="room-details">
+                    <span class="room-label small-heading">Room:</span>
+                    <span class="room-number">3024</span>
+                    </div>
+            </div>
+
+            <div class="box style-A">
+                <h2>Competitions</h2>
+                <div class="level-info">Level: Intermediate</div>
+                <div class="room-details">
+                    <span class="room-label small-heading">Room:</span>
+                    <span class="room-number">3016</span>
+                    <a href="">Learn more</a> 
+                </div>
+            </div>
+
+            <div class="box style-B">
+                <h2>Project Room</h2>
+                <div class="level-info">Level: Beginner</div>
+                <div class="room-details">
+                    <span class="room-label small-heading">Room:</span>
+                    <span class="room-number">3002</span>
+                    </div>
+            </div>
+
+            <div class="box style-A">
+                <h2>Machine Learning</h2>
+                <div class="level-info">Level: Beginner</div>
+                <div class="room-details">
+                    <span class="room-label small-heading">Room:</span>
+                    <span class="room-number">3012</span>
+                    <a href="">Learn more</a> 
+                </div>
+            </div>
         </div>
-        <div id="box1">
-            <h2>Competitions</h2>
-            <h2>Level: Intermediate</h2>
-            <h2>Room:</h2>
-            <h1>3016</h1>
-            <a href="">Learn More</a>
+
+        <div class="footer">
+            <div class="footer-left">
+                instagram @shscsclub
+            </div>
+            <div class="footer-right">
+                Last updated:
+            </div>
         </div>
-        <div id="box2">
-            <h2>Project Room</h2>
-            <h2>Level: Beginner</h2>
-            <h2>Room:</h2>
-            <h1>3002</h1>
-            <a href="">Learn More</a>
-        </div>
-        <div id="box1">
-            <h2>Machine Learning</h2>
-            <h2>Level: Beginner</h2>
-            <h2>Room:</h2>
-            <h1>3012</h1>
-            <a href="">Learn More</a>
-        </div>
+
     </div>
-    
 </body>
 </html>

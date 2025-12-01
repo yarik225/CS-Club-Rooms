@@ -1,0 +1,320 @@
+/* General Styling & Background */
+body {
+    font-family: Arial, sans-serif; /* Use a common sans-serif font */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light gray background for the page */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Page Container (to center content) */
+.container {
+    width: 90%; /* Adjust as needed */
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Header Section */
+#header {
+    background-color: #559955; /* Dark Green */
+    color: white;
+    padding: 15px 30px 0 30px; /* Reduced bottom padding to align buttons */
+    
+    /* Use flexbox to stack the content (title/date) and nav */
+    display: flex; 
+    flex-direction: column; 
+    
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Container for Title and Date (to keep them on one row) */
+.header-content {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-bottom: 15px; /* Separator padding */
+    width: 100%;
+}
+
+#header > .header-content > h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+    color: #f7e6a7; /* Light accent color */
+}
+
+/* Meeting Info in Header */
+.meeting-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.meeting-info > span {
+    margin: 2px 0;
+}
+
+/* Navigation Buttons (Now inside #header) */
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* Move the nav buttons up to overlap the border visually */
+    margin-top: -15px; 
+    justify-content: flex-start;
+}
+
+.nav-buttons button {
+    background-color: #ffffff; /* White buttons */
+    color: black;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 5px;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.3s;
+    /* Ensure buttons sit above the announcement box */
+    z-index: 10; 
+}
+
+.nav-buttons button:hover {
+    background-color: #eee;
+}
+
+/* Announcements Section */
+#announcements {
+    background-color: #fcebeb; /* Light pink background */
+    border: 1px solid #f9d8d8;
+    padding: 20px;
+    margin-top: 0; /* Adjusted to sit right below nav */
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 5;
+}
+
+#announcements h2 {
+    color: #990033; /* Darker red/maroon for the heading */
+    margin-top: 0;
+    font-weight: bold;
+}
+
+#announcements p {
+    color: #990033;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+/* Course/Room Boxes Container */
+#wrap {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px; /* ADJUSTED: Reduced gap for compression */
+    margin-top: 30px;
+    justify-content: center; 
+    width: 100%;
+}
+
+/* Individual Course Boxes */
+.box {
+    flex: 1 1 200px; 
+    max-width: 200px; 
+    padding: 10px; /* ADJUSTED: Reduced padding for compression */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #333;
+}
+
+/* Alternating Box Colors (Matching the screenshot) */
+.box.style-A { /* Yellowish base */
+    background-color: #f7e6a7;
+    border: 1px solid #f0d588;
+}
+
+.box.style-B { /* Light Green base */
+    background-color: #d8f0d8;
+    border: 1px solid #c7e5c7;
+}
+
+/* Inner section for Room Number */
+.room-details {
+    background-color: inherit; 
+    padding: 10px 0;
+    /* ADJUSTED: Reduced negative margins to match new box padding */
+    margin: 10px -10px 0 -10px; 
+    border-radius: 0 0 10px 10px; 
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+}
+
+/* Specific inner color sections for room number (Green/Yellow) */
+.box.style-A .room-details {
+    background-color: #99cc66; /* Light Green for style A */
+}
+
+.box.style-B .room-details {
+    background-color: #a7d05f; /* Slightly darker Green/Yellow for style B */
+}
+
+/* Headings within boxes */
+.box h2 {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #559955; /* Dark Green */
+}
+
+.box .level-info {
+    font-size: 0.9em;
+    font-weight: normal;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.box .room-number {
+    font-size: 3em;
+    font-weight: bold;
+    color: white; /* White room numbers */
+    margin: 0 0 10px 0;
+}
+
+/* Learn More Link */
+.box a {
+    text-decoration: none;
+    font-weight: bold;
+    background-color: transparent; 
+    margin-top: 10px;
+}
+
+.box.style-A a {
+    color: #559955; /* Dark Green text for style A links */
+}
+
+.box.style-B a {
+    color: #a7d05f; /* Green/Yellow text for style B links */
+}
+
+/* Utility to match the design's font size for 'Room:' and 'Level:' */
+.small-heading {
+    font-size: 0.9em !important;
+    color: black !important;
+    margin-bottom: 0 !important;
+}
+
+/* Footer (Instagram and Last Updated) */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px 0 40px 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.footer-left {
+    font-weight: bold;
+    color: #559955;
+}
+
+.footer-right {
+    font-style: italic;
+}
+
+
+/* ================================================= */
+/* 📱 Responsive Design (Media Queries) */
+/* ================================================= */
+
+/* For screens smaller than 768px (e.g., tablets and large phones) */
+@media (max-width: 768px) {
+
+    /* Header adjustments */
+    #header {
+        padding: 15px 15px 0 15px; /* Reduce horizontal padding */
+    }
+
+    /* Stack the title and meeting info vertically */
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Move meeting info to the left below the title */
+    .meeting-info {
+        align-items: flex-start;
+        margin-top: 5px;
+    }
+
+    /* Course/Room Boxes Container */
+    #wrap {
+        /* ADJUSTED: Consistent reduced gap for compression */
+        gap: 15px; 
+        margin-top: 20px;
+    }
+
+    /* Individual Course Boxes: Stack two per row with a small gap */
+    .box {
+        /* ADJUSTED: Calculated for two per row with 15px gap (15/2 = 7.5) */
+        flex: 1 1 calc(50% - 7.5px); 
+        max-width: calc(50% - 7.5px);
+    }
+}
+
+/* For screens smaller than 480px (e.g., small phones) */
+@media (max-width: 480px) {
+    
+    .container {
+        width: 95%; /* Use more of the available screen space */
+        margin: 10px auto;
+    }
+
+    /* Navigation buttons should stack vertically or spread out */
+    .nav-buttons {
+        flex-wrap: wrap; 
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+    
+    .nav-buttons button {
+        /* Buttons take up half width, stacking two per row */
+        width: 48%; 
+        margin: 2px;
+        border-radius: 5px; 
+    }
+    
+    /* Individual Course Boxes: Stack one per row */
+    #wrap {
+        gap: 20px;
+    }
+
+    .box {
+        flex: 1 1 100%; /* Each box takes up the full width */
+        max-width: 100%;
+    }
+    
+    /* Footer */
+    .footer {
+        flex-direction: column; /* Stack Instagram and Last Updated */
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-left {
+        margin-bottom: 5px;
+    }
+}
