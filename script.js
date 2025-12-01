@@ -1,5 +1,5 @@
-const API_KEY = "AIzaSyDM3HdtVzup3zlhxrcxnJ9IaQByz3pzibg";
-const SPREADSHEET_ID = "1-5QTUzZbeQDvmTGpdrzmdwiq6w3MhraGWBgI5EVxlJg";
+const API_KEY = "AIzaSyDM3HdtVzup3zlhxrcxnJ9IaQByz3pzibg"; //Jungmin Lee's Google Sheets API key
+const SPREADSHEET_ID = "1-5QTUzZbeQDvmTGpdrzmdwiq6w3MhraGWBgI5EVxlJg"; //CS Rooms spreadsheet
 const SHEET_NAME = "WebDevProject";
 
 
