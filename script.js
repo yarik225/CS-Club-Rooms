@@ -1,3 +1,7 @@
+import {ClubCardEBoardMember, ClubCard, renderHTML, getClubCardsGrid} from './room-cards/room-cards.js';
+//import './room-cards/room-cards.js';
+console.log("import successful");
+
 const API_KEY = "AIzaSyDM3HdtVzup3zlhxrcxnJ9IaQByz3pzibg"; //Jungmin Lee's Google Sheets API key
 const SPREADSHEET_ID = "1-5QTUzZbeQDvmTGpdrzmdwiq6w3MhraGWBgI5EVxlJg"; //CS Rooms spreadsheet
 const SHEET_NAME = "WebDevProject";
@@ -17,4 +21,9 @@ async function fetchSheetData() {
         console.error("Error fetching sheet:", error);
         return [];
     }
+}
+const sheetData = this.fetchSheetData();
+for (const i=0; i<sheetData.length; i++)
+{
+    
 }

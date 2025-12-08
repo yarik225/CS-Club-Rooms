@@ -21,7 +21,7 @@
 // This defines an E-Board member to be shown in a club card
 // contact is an object with the `type` attribute being 'email' or 'text', and the `content` attribute being an email or some other text.
 // The code does not validate name, imageURL, or role because people probably won't pass anothing other than strings to them.
-class ClubCardEBoardMember {
+export class ClubCardEBoardMember {
     constructor(name, imageURL, role, contact) {
         // Name - self-explanatory
         this.name = name;
@@ -100,7 +100,7 @@ class ClubCardEBoardMember {
 
 // The Club Card CLASS, not the HTML element.
 // Only club E-Board members are validated (it might be confusing to some)
-class ClubCard {
+export class ClubCard {
     constructor(clubCardInfo) {
         const {
             clubName,
@@ -196,7 +196,7 @@ class ClubCard {
 // Function to find the club cards grid
 // The ID is hard-coded in this function
 
-function getClubCardsGrid() {
+export function getClubCardsGrid() {
     return document.getElementById("clubCardsGrid");
 }
 
