@@ -1,4 +1,4 @@
-import {ClubCardEBoardMember, ClubCard, renderHTML, getClubCardsGrid} from './room-cards/room-cards.js';
+import {ClubCardEBoardMember, ClubCard, getClubCardsGrid} from './room-cards/room-cards.js';
 //import './room-cards/room-cards.js';
 console.log("import successful");
 
