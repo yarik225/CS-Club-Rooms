@@ -22,7 +22,7 @@ async function fetchSheetData() {
         return [];
     }
 }
-const sheetData = this.fetchSheetData();
+const sheetData = fetchSheetData();
 for (const i=0; i<sheetData.length; i++)
 {
     

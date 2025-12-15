@@ -202,7 +202,7 @@ export function getClubCardsGrid() {
 
 // Demo
 // The try-catch block makes it easier to debug on iPad.
-try {
+/*try {
     const cardsGrid = getClubCardsGrid();
 
     const continueWith = confirm("Welcome to the demo of the SHS CS room cards. This will include JS utilities as well as the HTML/CSS code. Do you want to try it out?\n\nYes if you want to add a new room to the list, no if you just want to see the design.\n\nRoom Cards JavaScript Utilities is Free Software. © 2025 Tyler Yeh, licensed under AGPLv3.");
@@ -242,3 +242,4 @@ try {
 } catch(err) { // iPad-friendly debugging (there is no inspector on iPad)
     alert(err + "\n\n" + err.stack);
 }
+*/
