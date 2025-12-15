@@ -21,7 +21,7 @@
 // This defines an E-Board member to be shown in a club card
 // contact is an object with the `type` attribute being 'email' or 'text', and the `content` attribute being an email or some other text.
 // The code does not validate name, imageURL, or role because people probably won't pass anothing other than strings to them.
-class ClubCardEBoardMember {
+export class ClubCardEBoardMember {
     constructor(name, imageURL, role, contact) {
         // Name - self-explanatory
         this.name = name;
@@ -100,7 +100,7 @@ class ClubCardEBoardMember {
 
 // The Club Card CLASS, not the HTML element.
 // Only club E-Board members are validated (it might be confusing to some)
-class ClubCard {
+export class ClubCard {
     constructor(clubCardInfo) {
         const {
             clubName,
@@ -196,13 +196,13 @@ class ClubCard {
 // Function to find the club cards grid
 // The ID is hard-coded in this function
 
-function getClubCardsGrid() {
+export function getClubCardsGrid() {
     return document.getElementById("clubCardsGrid");
 }
 
 // Demo
 // The try-catch block makes it easier to debug on iPad.
-try {
+/*try {
     const cardsGrid = getClubCardsGrid();
 
     const continueWith = confirm("Welcome to the demo of the SHS CS room cards. This will include JS utilities as well as the HTML/CSS code. Do you want to try it out?\n\nYes if you want to add a new room to the list, no if you just want to see the design.\n\nRoom Cards JavaScript Utilities is Free Software. © 2025 Tyler Yeh, licensed under AGPLv3.");
@@ -242,3 +242,4 @@ try {
 } catch(err) { // iPad-friendly debugging (there is no inspector on iPad)
     alert(err + "\n\n" + err.stack);
 }
+*/
